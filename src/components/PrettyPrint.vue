@@ -75,7 +75,10 @@ export default defineComponent({
       formattedJson.value = '';
       
       try {
-        const response = await fetch('/api/format', {
+        // Use absolute URL to make sure we're hitting the correct endpoint
+        const apiUrl = window.location.origin + '/api/format';
+        
+        const response = await fetch(apiUrl, {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
