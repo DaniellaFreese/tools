@@ -76,7 +76,7 @@ export default defineComponent({
       
       try {
         // Use absolute URL to make sure we're hitting the correct endpoint
-        const apiUrl = window.location.origin + '/api/format';
+        const apiUrl = 'https://workers-playground-odd-tree-ae8d.daniella-freese.workers.dev/api/format-json';
         
         const response = await fetch(apiUrl, {
           method: 'POST',
